@@ -1,9 +1,12 @@
 import { useState } from 'react'
-import reactLogo from '../assets/react.svg' // RUTA ACTUALIZADA
+import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
-import '../styles/App.css' // RUTA ACTUALIZADA
+import '../styles/App.css'
+import { Routes, Route } from 'react-router-dom' // <-- AÑADE ESTA LÍNEA
 
-function App() {
+// Este será tu componente de la página de inicio. Por ahora, usaremos el contenido existente.
+// Más adelante, crearemos un componente HomePage.tsx separado.
+function HomePageContent() {
   const [count, setCount] = useState(0)
 
   return (
@@ -22,13 +25,22 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Edit <code>src/pages/App.tsx</code> and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePageContent />} /> {/* <-- DEFINE LA RUTA DE INICIO */}
+      {/* Aquí irán otras rutas en el futuro, como /cursos, /clases, etc. */}
+    </Routes>
   )
 }
 
