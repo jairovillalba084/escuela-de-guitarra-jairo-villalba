@@ -2,11 +2,11 @@ import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import '../styles/App.css'
-import { Routes, Route } from 'react-router-dom' // <-- AÑADE ESTA LÍNEA
+import { Routes, Route } from 'react-router-dom'
+import Header from '../components/Header' // Importamos el Header
 
-// Este será tu componente de la página de inicio. Por ahora, usaremos el contenido existente.
-// Más adelante, crearemos un componente HomePage.tsx separado.
-function HomePageContent() {
+// HomePageContent ahora es un componente separado y exportable
+const HomePageContent: React.FC = () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -37,10 +37,13 @@ function HomePageContent() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePageContent />} /> {/* <-- DEFINE LA RUTA DE INICIO */}
-      {/* Aquí irán otras rutas en el futuro, como /cursos, /clases, etc. */}
-    </Routes>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePageContent />} /> {/* Usamos el componente HomePageContent */}
+        {/* Aquí irán otras rutas en el futuro */}
+      </Routes>
+    </>
   )
 }
 
