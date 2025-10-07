@@ -24,8 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +63,12 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+/* Estilos para centrar el contenido principal */
+.main-container {
+  max-width: 1200px; /* Define un ancho máximo para tu contenido */
+  margin: 0 auto; /* Esto centra el contenedor horizontalmente */
+  padding: 0 20px; /* Añade un poco de padding a los lados para pantallas pequeñas */
 }
