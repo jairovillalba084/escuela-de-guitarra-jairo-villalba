@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo nav.png'; // ✅ importa el logo (ajustá el nombre según tu archivo real)
 import '../styles/Header.css';
 
 const Header: React.FC = () => {
@@ -8,7 +9,9 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-logo">
-        <Link to="/">Escuela de Guitarra Jairo</Link>
+        <Link to="/">
+          <img src={logo} alt="Escuela de Guitarra Jairo" className="logo-img" />
+        </Link>
       </div>
 
       <button

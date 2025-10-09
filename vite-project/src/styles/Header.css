@@ -15,6 +15,15 @@
   font-weight: bold;
 }
 
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
+
+}
+
+
+
 /* Botón hamburguesa oculto en escritorio */
 .menu-toggle {
   background: none;
