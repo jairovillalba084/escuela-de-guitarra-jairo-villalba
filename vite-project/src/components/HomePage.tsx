@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/HomePage.css'; // Crearemos este archivo CSS en el siguiente paso
 
+
+
+
+
+
 const HomePage: React.FC = () => {
   return (
     <div className="home-page">
@@ -12,7 +17,22 @@ const HomePage: React.FC = () => {
           <p>Aprende guitarra desde cero o lleva tu técnica al siguiente nivel con Jairo.</p>
           <Link to="/cursos" className="btn-primary">Explora Nuestros Cursos</Link>
         </div>
-        {/* Aquí iría un video o imagen de fondo */}
+<video
+  className="hero-video"
+  src="/hero-video.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+></video>
+
+
+
+
+
+
+
+
       </section>
 
       {/* Sección Novedades */}
